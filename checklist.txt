@@ -1,0 +1,8 @@
+Environment Checklist
+====================
+
+- Python version: 3.x (replace with your actual version)
+- Virtual environment (venv) active: Yes
+- Django version: (replace with your actual version)
+- Django runserver working: Yes
+- Git remote set: Yes
