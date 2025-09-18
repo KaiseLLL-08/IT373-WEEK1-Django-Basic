@@ -13,5 +13,9 @@ def hello(request):
     return render(request, 'pages/hello.html')
 
 def about(request):
-    return render(request, 'pages/about.html')
+    info = {
+        'first_name': 'Erial Iverson',
+        'student_id': '2023-07017',
+    }
+    return render(request, 'pages/about.html', info)
 

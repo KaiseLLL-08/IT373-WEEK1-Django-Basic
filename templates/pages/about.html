@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {% block title %}About{% endblock title %}
 {% block content %}
+    <h1>About Page</h1>
     <h1>About this Exercise</h1>
     <p>Week1 focuses on project setup, URL routing, and static files.</p>
+    <p>Name: {{ first_name }}</p>
+    <p>Student ID: {{ student_id }}</p>
+    <p>This page demonstrates template inheritance in Django.</p>
 {% endblock content %}
