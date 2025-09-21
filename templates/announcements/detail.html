@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}Announcement Detail{% endblock title %}
+{% block content %}
+    <h1>{{ announcement.title }}</h1>
+    <div id="short-content">
+        {{ announcement.content|truncatechars:100 }}
+        <a href="#" id="read-more">Read more</a>
+    </div>
+    <div id="full-content" style="display:none;">
+        {{ announcement.content }}
+        <a href="#" id="show-less">Show less</a>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var readMore = document.getElementById('read-more');
+            var showLess = document.getElementById('show-less');
+            var shortContent = document.getElementById('short-content');
+            var fullContent = document.getElementById('full-content');
+            if (readMore) {
+                readMore.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    shortContent.style.display = 'none';
+                    fullContent.style.display = 'block';
+                });
+            }
+            if (showLess) {
+                showLess.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    fullContent.style.display = 'none';
+                    shortContent.style.display = 'block';
+                });
+            }
+        });
+    </script>
+{% endblock content %}
